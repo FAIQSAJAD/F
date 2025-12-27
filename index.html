@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faiq Sajad</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
+:root{--p:#4f46e5;--s:#22c55e;--bg:#f8fafc;--d:#0f172a;--g:#64748b}
+.dark{--bg:#020617;--d:#e5e7eb;--g:#94a3b8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--d);padding-bottom:90px;transition:.4s}
+a{text-decoration:none;color:inherit}
+#loader{position:fixed;inset:0;background:#0f172a;display:flex;align-items:center;justify-content:center;z-index:9999}
+.loader{width:60px;height:60px;border:6px solid #334155;border-top:6px solid var(--p);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,#4f46e5,#22c55e);z-index:2000}
+header{position:sticky;top:0;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.05);z-index:100}
+.dark header{background:#020617}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1rem}
+.logo{font-weight:700;color:var(--p);font-size:1.3rem}
+.hero{text-align:center;padding:4rem 1.5rem;background:linear-gradient(135deg,#eef2ff,#f0fdf4)}
+.dark .hero{background:linear-gradient(135deg,#020617,#020617)}
+.hero img{width:140px;height:140px;border-radius:50%;margin:auto;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+.hero h1{margin-top:.8rem;font-size:2.2rem}
+.typing{color:var(--p);margin-top:.4rem}
+.btn{display:inline-block;margin-top:1.5rem;padding:.9rem 1.6rem;border-radius:999px;background:var(--p);color:#fff;font-weight:600;transition:.25s}
+.btn:hover{transform:scale(1.05)}
+.social{display:flex;justify-content:center;gap:1.2rem;margin-top:1.4rem}
+.social a{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.4rem;box-shadow:0 10px 25px rgba(0,0,0,.25);transition:.25s}
+.social a:hover{transform:scale(1.1)}
+.instagram{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4)}
+.whatsapp{background:#25D366}
+section{padding:3.5rem 1.5rem;max-width:1100px;margin:auto}
+.title{text-align:center;margin-bottom:2rem}
+.title h2{font-size:1.9rem}
+.title p{color:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.card{background:#fff;padding:1.6rem;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.05);animation:fade .8s}
+.dark .card{background:#020617}
+@keyframes fade{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.skill{margin-bottom:1rem}
+.skill span{font-size:.9rem}
+.bar{height:10px;background:#e5e7eb;border-radius:999px;margin-top:.4rem;overflow:hidden}
+.bar div{height:100%;background:linear-gradient(90deg,#4f46e5,#22c55e)}
+form{max-width:500px;margin:auto;background:#fff;padding:2rem;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.05)}
+.dark form{background:#020617}
+input,textarea{width:100%;padding:.8rem;margin-bottom:1rem;border:1px solid #e2e8f0;border-radius:10px;font-family:inherit}
+button{width:100%;padding:.9rem;border:none;border-radius:999px;background:var(--s);color:#fff;font-weight:600}
+.bottom{position:fixed;left:0;right:0;bottom:0;background:#fff;display:flex;justify-content:space-around;padding:.6rem 0;box-shadow:0 -10px 25px rgba(0,0,0,.15);z-index:999}
+.dark .bottom{background:#020617}
+.bottom a{font-size:.7rem;color:#777;display:flex;flex-direction:column;align-items:center}
+.bottom a i{font-size:1.2rem}
+.bottom a.active{color:var(--p)}
+footer{text-align:center;padding:2rem 1rem;color:var(--g);background:#f1f5f9}
+.dark footer{background:#020617}
+.toggle{cursor:pointer;font-size:1.2rem}
+</style></head>
+<body><div id="loader"><div class="loader"></div></div>
+<div class="progress" id="progress"></div><header>
+<div class="nav">
+<div class="logo">Faiq</div>
+<button class="btn" onclick="openLogin()">Login</button>
+</div>
+</header><div class="hero" id="home">
+<div class="hero-bg"></div>
+<div style="position:relative;display:inline-block">
+  <span class="profile-ring"></span>
+  <img src="https://i.ibb.co/Lz5ZVY0K/Faiq.png">
+</div>
+<h1 id="name">Faiq Sajad <i class="fa-solid fa-circle-check" style="color:#2563eb"></i></h1>
+<div class="name-line"></div>
+<div class="typing" id="typing"></div>
+<div class="badge">Available for Projects</div>
+<div class="social">
+<a href="https://instagram.com/_lonez_lonefaiq_" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://wa.me/918082897505" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+<a href="#contact" class="btn">Contact Me</a>
+</div><section id="skills">
+<div class="title"><h2>Skills</h2><p>Professional expertise</p></div>
+<div class="skill"><span>HTML</span><div class="bar"><div style="width:95%"></div></div></div>
+<div class="skill"><span>CSS</span><div class="bar"><div style="width:92%"></div></div></div>
+<div class="skill"><span>JavaScript</span><div class="bar"><div style="width:88%"></div></div></div>
+<div class="skill"><span>UI / UX Design</span><div class="bar"><div style="width:85%"></div></div></div>
+<div class="skill"><span>Mobile Optimization</span><div class="bar"><div style="width:90%"></div></div></div>
+</section><section id="projects">
+<div class="title"><h2>Projects</h2><p>Professional work showcase</p></div>
+<div class="grid">
+<div class="card">Personal Portfolio Website</div>
+<div class="card">Business Landing Page</div>
+<div class="card">Admin Dashboard System</div>
+<div class="card">Student Management App</div>
+<div class="card">Contact & Email Automation</div>
+<div class="card">Mobile‑First UI Website</div>
+</div>
+</section><section id="stats">
+<div class="title"><h2>Stats</h2><p>Real performance numbers</p></div>
+<div class="grid">
+<div class="card"><h3>25+</h3><p>Projects Completed</p></div>
+<div class="card"><h3>2+</h3><p>Years Experience</p></div>
+<div class="card"><h3>15+</h3><p>Happy Clients</p></div>
+<div class="card"><h3>100%</h3><p>Mobile Optimized</p></div>
+</div>
+</section><section id="testimonials">
+<div class="title"><h2>Testimonials</h2><p>What people say</p></div>
+<div class="grid">
+<div class="card">“Very professional and fast work.”</div>
+<div class="card">“Clean design and great support.”</div>
+<div class="card">“Best student developer I’ve seen.”</div>
+</div>
+</section><section id="contact">
+<div class="title"><h2>Contact Me</h2><p>Messages come to your email</p></div>
+<form onsubmit="sendMail(event)">
+<input type="text" id="cname" placeholder="Your Name" required>
+<input type="email" id="cemail" placeholder="Your Email" required>
+<textarea id="cmsg" rows="4" placeholder="Your Message" required></textarea>
+<button>Send Message</button>
+</form>
+</section><section id="admin">
+<h3>Admin Panel</h3>
+<input type="text" id="newName" placeholder="Change name">
+<button class="btn" onclick="updateName()">Update Name</button>
+</section><footer>
+<div class="cta">
+<h3>Let’s Build Something Amazing</h3>
+<a href="#contact" class="btn">Hire Me</a>
+</div>© 2025 Faiq Sajjad • Ultra Pro Developer</footer><div id="login">
+<div class="login-box">
+<h3>Admin Login</h3>
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+<button class="btn" onclick="login()">Login</button>
+</div>
+</div><nav class="bottom">
+<a href="#home" class="active"><i class="fa-solid fa-house"></i>Home</a>
+<a href="#skills"><i class="fa-solid fa-code"></i>Skills</a>
+<a href="#projects"><i class="fa-solid fa-briefcase"></i>Projects</a>
+<a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a>
+</nav><script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script><script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script><script>
+emailjs.init("owQiu7oRHLqPHFUnb");
+
+/* Loader */
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
+  if (loader) loader.style.display = "none";
+});
+
+setTimeout(() => {
+  const loader = document.getElementById("loader");
+  if (loader) loader.style.display = "none";
+}, 3000);
+
+/* Typing */
+const t="Web Developer • Admin Enabled • Ultra Pro";let i=0;const el=document.getElementById('typing');
+(function type(){if(i<t.length){el.innerHTML+=t.charAt(i++);setTimeout(type,70)}})();
+
+/* Stats Counter */
+function animateStat(id, end){
+let c=0;const el=document.getElementById(id);
+const interval=setInterval(()=>{
+c++;
+el.innerText=c;
+if(c>=end) clearInterval(interval);
+},30);
+}
+
+animateStat('statYears',2);
+animateStat('statProjects',18);
+animateStat('statHours',1200);
+
+/* Progress */
+window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+
+/* Login */
+function openLogin(){document.getElementById('login').style.display='flex'}
+function login(){
+if(user.value==='admin' && pass.value==='1234'){
+localStorage.admin=true;
+document.getElementById('login').style.display='none';
+document.getElementById('admin').style.display='block';
+alert('Admin logged in');
+}else alert('Wrong login');
+}
+
+if(localStorage.admin)document.getElementById('admin').style.display='block';
+
+/* Admin */
+function updateName(){document.getElementById('name').innerText=newName.value}
+
+/* Contact */
+function sendMail(e){
+e.preventDefault();
+emailjs.send('service_n1so1kq','template_4lps5qd',{
+from_name:cname.value,
+reply_to:cemail.value,
+message:cmsg.value
+});
+alert('Message sent to your email!');
+}
+
+/* Bottom nav */
+document.querySelectorAll('.bottom a').forEach(l=>l.onclick=()=>{document.querySelectorAll('.bottom a').forEach(x=>x.classList.remove('active'));l.classList.add('active')});
+</script></body>
+</html>
